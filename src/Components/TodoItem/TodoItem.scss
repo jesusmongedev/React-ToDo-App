@@ -1,0 +1,57 @@
+.todo-form-item {
+        padding-bottom: 0.5rem;
+        .list-content {
+                display: flex;
+                max-width: 334px;
+                .checkbox {
+                        font-size: 2.25rem;
+                        margin-right: 1rem;
+                        transition: all ease .4s;
+                        &:hover {   
+                                color: #ffcc70;
+                                cursor: pointer;
+                        }
+                }
+                .checkbox__completed {
+                        color: #ffcc70;
+                }
+        }
+}
+
+.list-content__completed {
+        text-decoration: line-through;
+}
+
+
+
+.form-actions {
+        margin-left: 1rem;
+        .form-actions-icon {
+                font-size: 2.25rem;
+                margin: 0 0.2rem;
+                cursor: pointer;
+                transition: all ease 0.4s;        
+        }
+        .form-actions-delete:hover {
+                color: #f80000;
+        }
+        .form-actions-edit:hover {
+                color: #4158d0;
+        }
+} 
+
+@media screen and (min-width:768px) {
+        .list-content {
+                margin-right: 1rem;
+                .checkbox {
+                        margin-right: 1.3rem;
+                        transform: scale(1.2);
+                }
+        }
+        .form-actions {
+                margin-left: 1.5rem;
+                .form-actions-icon {
+                        margin: 0 0.2rem;
+                }
+        }
+}

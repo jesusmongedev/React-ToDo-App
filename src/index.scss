@@ -1,0 +1,26 @@
+/* Initial Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
+  // background: -webkit-linear-gradient(
+  //   to right,
+  //   #eaecc6,
+  //   #2bc0e4
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to right,
+  //   #eaecc6,
+  //   #2bc0e4
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

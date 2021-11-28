@@ -1,0 +1,43 @@
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 100vw;
+  font-size: 1.8rem;
+  padding: 0 1rem;
+  //Overflow-y 
+  // overflow-y: scroll;
+  // height: 80vh;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 0.3rem solid black;
+      list-style: none;
+      .form-actions {
+        display: flex;
+        gap: 0.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .todo-form {
+    min-width: 420px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .todo-form {
+    font-size: 2rem;
+    gap: 2.5rem;
+    ul {
+      gap: 2.5rem;
+    }
+  }
+}
