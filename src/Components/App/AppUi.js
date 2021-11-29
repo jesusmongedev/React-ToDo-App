@@ -1,3 +1,4 @@
+import React from 'react'
 import { TodoContext } from "../TodoContext";
 import { TodoCounter } from "../TodoCounter/index";
 import { TodoForm } from "../TodoForm/index";
@@ -6,22 +7,21 @@ import { TodoItem } from "../TodoItem/index";
 import { CreateButton } from "../CreateButton/index";
 
 const AppUi = () => {
-  console.log('Se renderizo el componente AppUi');
+  // Manera mas optima de llamar mis estados del value creado en mi TodoContext
+  const {
+    error, 
+    loading, 
+    searchedTodos, 
+    toggleCompleteTodo, 
+    deleteTodo, 
+    editTodo,
+  }
+   = React.useContext(TodoContext);
+
   return (
     <>
         <TodoCounter />
 
-        <TodoContext.Consumer>
-          {/* Para no usar value.error value.loading llamamos en los parametros de la funcion 
-          las propiedades que queremos usar*/ }
-          {({
-            error, 
-            loading, 
-            searchedTodos, 
-            toggleCompleteTodo, 
-            deleteTodo, 
-            editTodo,
-        }) => (
             <TodoForm>
             <TodoSearch />
             {/* Agregar Estados: cargando, carga completa, error */}
@@ -40,9 +40,7 @@ const AppUi = () => {
               />
             ))}
             </TodoForm>
-          )}
-        </TodoContext.Consumer>
-        
+
         <CreateButton />
     </>
   );
