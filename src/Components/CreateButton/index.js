@@ -7,7 +7,7 @@ const CreateButton = (props) => {
     // Otra forma de abrir y cerrar el Modal
     props.setOpenModal(prevState => !prevState);
   }
-
+  
     return (
         <button
         className="todo-button"

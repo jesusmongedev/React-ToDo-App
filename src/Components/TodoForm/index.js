@@ -1,9 +1,15 @@
 import "./TodoForm.scss";
 
 const TodoForm = ( props ) => {
-  console.log('Se renderizó el TodoForm');
+  const onSubmit = (ev)=>{
+    ev.preventDefault();
+  }
+
   return (
-    <form className="todo-form">
+    <form 
+      className="todo-form"
+      onSubmit={onSubmit}
+    >
       <ul>{props.children}</ul>
     </form>
   );
