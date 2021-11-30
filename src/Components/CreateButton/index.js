@@ -2,13 +2,15 @@ import { ImPlus } from "react-icons/im";
 import './CreateButton.scss'
 
 const CreateButton = (props) => {
-  console.log('Se renderizo el CreateButton');
   const onClickButton = () => {
-    alert('The modal will be open here to add Todos')
+    // props.setOpenModal(!props.openModal);
+    // Otra forma de abrir y cerrar el Modal
+    props.setOpenModal(prevState => !prevState);
   }
 
     return (
         <button
+        className="todo-button"
         onClick={onClickButton}
       >
         <ImPlus className="plus-icon" />

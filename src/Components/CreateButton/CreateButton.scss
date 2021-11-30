@@ -1,4 +1,4 @@
-button {
+.todo-button {
     position: fixed;
     bottom: 24px;
     right: 65px;
@@ -6,15 +6,14 @@ button {
     border-radius: 50%;
     width: 38px;
     height: 38px;
-    background-color: transparent;
-    border: 0.3rem solid black;
+    background-color: black;
+    color: white;
+    border: 0.3rem solid white;
     cursor: pointer;
     transform: rotate(0);
     transition: all ease 0.3s;
+    z-index: 1;
     &:hover {
       transform: rotate(224deg);
     }
-    // .plus-icon {
-    //   font-size: 1.9rem;
-    // }
   }

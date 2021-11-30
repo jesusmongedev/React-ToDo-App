@@ -14,6 +14,7 @@ function TodoProvider(props) {
     } = useLocalStorage('TODOS_V1', []);
     
     const [searchValue, setSearchValue] = React.useState('');
+    const [openModal, setOpenModal] = React.useState(false);
     
     const completedTodos = todos.filter((todo) => todo.completed).length;
     
@@ -30,6 +31,17 @@ function TodoProvider(props) {
       return todoText.includes(searchText);
     });
     }
+    
+    //* Agrear un nuevo Todo
+    const addTodo = (text) => {
+    const newTodos = [...todos];
+    // .pus Agregar un nuevo Todo al final de nustro Array
+    newTodos.push({
+      completed: false,
+      text,
+    })
+    saveTodos(newTodos);
+    };
     
     //* Solución Permitiendo al usuario desmarque un Todo como no completado
     const toggleCompleteTodo = (text) => {
@@ -73,9 +85,12 @@ function TodoProvider(props) {
             searchValue,
             setSearchValue,
             searchedTodos,
+            addTodo,
             toggleCompleteTodo,
             deleteTodo,
             editTodo,
+            openModal,
+            setOpenModal,
         }}>
             {props.children}
         </TodoContext.Provider>

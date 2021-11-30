@@ -4,11 +4,7 @@ import "./index.scss";
 import { App } from './Components/App/index';
 
 ReactDOM.render(
-    <>
-
-      <App/>
-      
-    </>,
+      <App/>,
   document.getElementById('root')
 );
 

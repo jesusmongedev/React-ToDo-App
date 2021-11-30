@@ -5,6 +5,8 @@ import { TodoForm } from "../TodoForm/index";
 import { TodoSearch } from "../TodoSearch/index";
 import { TodoItem } from "../TodoItem/index";
 import { CreateButton } from "../CreateButton/index";
+import { Modal } from '../../Modal';
+import { ModalForm } from '../ModalForm';
 
 const AppUi = () => {
   // Manera mas optima de llamar mis estados del value creado en mi TodoContext
@@ -15,6 +17,8 @@ const AppUi = () => {
     toggleCompleteTodo, 
     deleteTodo, 
     editTodo,
+    openModal,
+    setOpenModal,
   }
    = React.useContext(TodoContext);
 
@@ -41,7 +45,16 @@ const AppUi = () => {
             ))}
             </TodoForm>
 
-        <CreateButton />
+
+            {openModal && (
+              <Modal> 
+                < ModalForm/>
+              </Modal>
+            )}
+
+        <CreateButton 
+          setOpenModal={setOpenModal}
+        />
     </>
   );
 };
