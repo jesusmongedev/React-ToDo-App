@@ -1,0 +1,41 @@
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 6rem;
+    gap: 1.5rem;
+    font-size: 2rem;
+    background-color: rgba(32,35,41,.9);
+    border-radius: 8px;
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.75);
+    .modalForm__add {
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        .modalForm__add-input {
+            border: none;
+            box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.75);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            background: transparent;
+            font-family: inherit;
+            font-size: 1.6rem;
+            color: white;
+            &:focus {
+                outline: none;
+                box-shadow: 0px 1px 4px 1px rgba(255, 255, 255, 0.75);
+            }
+        }
+    }
+    .modal-button {
+        // border: 1px solid rgba(255, 255, 255, 0.75);
+        border-radius: 8px;
+        background: rgb(1, 135, 180);
+        padding: 1.5rem 2rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .modal-button--cancel {
+        background-color: rgb(253, 21, 21);
+    }
+}

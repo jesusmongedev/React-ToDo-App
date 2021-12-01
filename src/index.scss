@@ -8,9 +8,12 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
 #root {
   display: flex;
   justify-content: center;
-  // height: 100vh;
-  font-family: "Montserrat Alternates", sans-serif;
 }
+

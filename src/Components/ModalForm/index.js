@@ -28,28 +28,31 @@ const ModalForm = () => {
     }
 
     return (
-        <form onSubmit={onSubmit} >
-            <label htmlFor="newTodo"> Add a Todo ... </label>
-            <textarea
-                value={newTodoValue}
-                onChange={onChange}
-                id="newTodo"
-                placeholder="What needs to be done ... ?"
-            />
-            <div>
-                <button 
-                    className="modal-button" 
-                    type="button" 
-                    onClick={onCancel}
-                > 
-                    Cancel 
-                </button>
+        <form onSubmit={onSubmit} className="modalForm" > 
+            <label htmlFor="newTodo" className="modalForm__label" > Add New To-do ... </label>
+            <div className="modalForm__add">
+                <textarea
+                    value={newTodoValue}
+                    onChange={onChange}
+                    id="newTodo"
+                    placeholder="What needs to be done ... ?"
+                    className="modalForm__add-input"
+                    rows="1"
+                    cols="60"
+                />
                 <button 
                     className="modal-button"
                     type="submit"
                     onClick={onSubmit}
                 > 
                     Add 
+                </button>
+                <button 
+                    className="modal-button modal-button--cancel" 
+                    type="button" 
+                    onClick={onCancel}
+                > 
+                    Cancel 
                 </button>
             </div>
         </form>
