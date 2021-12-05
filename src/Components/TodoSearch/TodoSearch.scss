@@ -3,10 +3,14 @@
     position: sticky;
     top: 0;
     padding: 12px 24px;
-    border-radius: 100px;
-    border: 0.3rem solid black;
+    border-radius: 8px;
+    border: none;
+    outline: 0.3rem solid black;
     font-size: 1.8rem;
     font-weight: 700;
+    &:focus {
+      outline: 0.3rem solid turquoise;
+    }
     &::placeholder {
       color: rgba(0, 0, 0, 0.4);
       font-weight: 500;

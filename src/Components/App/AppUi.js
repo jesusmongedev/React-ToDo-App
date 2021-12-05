@@ -7,6 +7,8 @@ import { TodoItem } from "../TodoItem/index";
 import { CreateButton } from "../CreateButton/index";
 import { Modal } from "../../Modal";
 import { ModalForm } from "../ModalForm";
+import { LoadingTodo } from "../LoadingTodo";
+import { ClearTodos } from "../ClearTodos";
 
 const AppUi = () => {
   // Manera mas optima de llamar mis estados del value creado en mi TodoContext
@@ -16,10 +18,11 @@ const AppUi = () => {
     searchedTodos,
     toggleCompleteTodo,
     deleteTodo,
-    editTodo,
     openModal,
     setOpenModal,
-  } = React.useContext(TodoContext);
+    handleEdit,
+    totalTodos,
+    } = React.useContext(TodoContext);
 
   return (
     <>
@@ -28,7 +31,9 @@ const AppUi = () => {
         <TodoSearch />
         {/* Agregar Estados: cargando, carga completa, error */}
         {error && <p>Hubo un error, recarga la página</p>}
-        {loading && <p>Estamos cargando. no desesperes</p>}
+        {loading && new Array(4).fill().map((item,index)=>(
+          <LoadingTodo key={index} />
+        ))}
         {!loading && !searchedTodos.length && <p>Crea tu primer Todo</p>}
 
         {searchedTodos.map((todo) => (
@@ -38,18 +43,21 @@ const AppUi = () => {
             completed={todo.completed}
             onComplete={() => toggleCompleteTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
-            onEdit={() => editTodo(todo.text)}
+            onEdit={() => handleEdit(todo.text)}
           />
         ))}
       <CreateButton setOpenModal={setOpenModal} />
       </TodoForm>
-
+      
+      {totalTodos? <ClearTodos/> : ""}
+      
 
       {openModal && (
         <Modal>
           <ModalForm />
         </Modal>
       )}
+
     </>
   );
 };

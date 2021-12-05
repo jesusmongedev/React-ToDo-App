@@ -10,7 +10,6 @@ const useLocalStorage = (itemName, initialValue) => {
 
     // Usaremos el React Hook useEffect para cargar los Todos iniciales en el primer Render
     React.useEffect((() => {
-      console.log('Se renderizo el useEffect');
       setTimeout(() => {
 
         try {
@@ -33,7 +32,6 @@ const useLocalStorage = (itemName, initialValue) => {
   
           } else {
             // Transformamos el valor de String a un Objeto que entiende Js => Array
-            // console.log('Esto llega de saveTodos: ' + localStorageItem);
             parsedItem = JSON.parse(localStorageItem);
           }
   
@@ -45,7 +43,8 @@ const useLocalStorage = (itemName, initialValue) => {
         } catch(error) {
           setError(error);
         }
-      }, 1000);
+      }, 2000);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }),[]);
 
   

@@ -12,7 +12,6 @@
     cursor: pointer;
     transform: rotate(0);
     transition: all ease 0.3s;
-    z-index: 1;
     &:hover {
       transform: rotate(224deg);
     }

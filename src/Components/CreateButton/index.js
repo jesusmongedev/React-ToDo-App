@@ -5,7 +5,7 @@ const CreateButton = (props) => {
   const onClickButton = () => {
     // props.setOpenModal(!props.openModal);
     // Otra forma de abrir y cerrar el Modal
-    props.setOpenModal(prevState => !prevState);
+    props.setOpenModal(true);
   }
   
     return (

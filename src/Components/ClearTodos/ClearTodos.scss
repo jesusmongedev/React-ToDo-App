@@ -1,0 +1,8 @@
+.clear-button--clear {
+    cursor: pointer;
+    margin-top: 3rem;
+    background-color: transparent;
+    &:hover {
+        box-shadow: 0px 5px  4px 0 rgba(0, 0, 0, 0.459);
+    }
+}

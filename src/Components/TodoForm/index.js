@@ -1,3 +1,4 @@
+import React from "react";
 import "./TodoForm.scss";
 
 const TodoForm = ( props ) => {
@@ -10,7 +11,7 @@ const TodoForm = ( props ) => {
       className="todo-form"
       onSubmit={onSubmit}
     >
-      <ul>{props.children}</ul>
+      <ul className="todo-form__list">{props.children}</ul>
     </form>
   );
 };

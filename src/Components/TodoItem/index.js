@@ -4,25 +4,25 @@ import { BiEdit } from "react-icons/bi";
 import { RiDeleteBinLine } from "react-icons/ri";
 
 const TodoItem = (props) => {
-  console.log('Se renderizo el TodoItem');
+
+
   return (
     <li
       className={`todo-form-item ${props.deleted ? "todo-form-item__deleted" : ""}`}
     >
-      <p
-        className={`list-content ${
-          props.completed ? "list-content__completed" : ""
-        }`}
-        >
-        <span
+        <p
+          className={`list-content ${
+            props.completed ? "list-content__completed" : ""
+          }`}
+          >
+          <span
           className={`checkbox ${props.completed ? "checkbox__completed" : ""}`}
           onClick={props.onComplete}
-        >
-        <BsCheck2Square/>
-        </span>
-          {props.text}
-
-      </p>
+          >
+            <BsCheck2Square/>
+          </span>
+            {props.text}
+        </p>
 
       <div className="form-actions">
         <span 
