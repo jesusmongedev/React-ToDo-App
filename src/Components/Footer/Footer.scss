@@ -12,7 +12,12 @@ footer {
     .footer__description-name {
         border-radius: 8px;
         padding: 0.5rem 0.5rem;
-        background-color: #000D6B;
+        background-color: black;
         color: white;
     }
+}
+
+body.dark .footer__description-name {
+    background-color: white;
+    color: black;
 }

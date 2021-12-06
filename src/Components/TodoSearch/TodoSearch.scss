@@ -9,6 +9,7 @@
     background-color: transparent;
     font-size: 1.8rem;
     font-weight: 700;
+    transition: .3s all ease;
     &:focus {
       outline: 0.3rem solid #FF9300;
     }
@@ -18,3 +19,14 @@
       font-size: 1.8rem;
     }
   }
+
+  body.dark .todo-search {
+    color: white;
+    outline-color: #FFF2;
+    &:focus {
+      outline: 0.3rem solid #FF9300;
+    }
+    &::placeholder {
+      color: #FFF2;
+    }
+  } 
