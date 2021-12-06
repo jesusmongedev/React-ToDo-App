@@ -22,11 +22,11 @@
 
   body.dark .todo-search {
     color: white;
-    outline-color: #FFF2;
+    outline-color: rgba(255, 255, 255, 0.5);
     &:focus {
       outline: 0.3rem solid #FF9300;
     }
     &::placeholder {
-      color: #FFF2;
+      color: rgba(255, 255, 255, 0.5);
     }
   } 
