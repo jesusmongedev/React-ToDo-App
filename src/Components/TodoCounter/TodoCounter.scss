@@ -1,11 +1,19 @@
 .todo-counter {
+    position: relative;
     font-size: 2.4rem;
-    margin: 4rem 0 0 0;
+    margin: 3rem 0 0 0;
     text-align: center;
+    .todo-counter-stats span {
+        color: #FF5151;
+    }
+    .todo-counter-stats .completed {
+        color: #000D6B;
+    }
 }
 
 @media screen and (min-width:768px) {
     .todo-counter {
+        margin: 4rem 0 0 0;
         font-size: 3.4rem;
     }
 }

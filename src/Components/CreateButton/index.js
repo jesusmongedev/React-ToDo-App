@@ -9,7 +9,7 @@ const CreateButton = (props) => {
   }
   
     return (
-        <button
+      <button
         className="todo-button"
         onClick={onClickButton}
       >

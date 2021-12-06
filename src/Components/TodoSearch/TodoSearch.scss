@@ -6,10 +6,11 @@
     border-radius: 8px;
     border: none;
     outline: 0.3rem solid black;
+    background-color: transparent;
     font-size: 1.8rem;
     font-weight: 700;
     &:focus {
-      outline: 0.3rem solid turquoise;
+      outline: 0.3rem solid #FF9300;
     }
     &::placeholder {
       color: rgba(0, 0, 0, 0.4);
