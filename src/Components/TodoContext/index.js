@@ -99,11 +99,15 @@ function TodoProvider(props) {
     }
   };
 
+  const SWITCH_PRESSED = document.getElementById("switch");
+
   // Obtenemos el modo actual por su clave y comprobamos su valor el cual debe ser con cadenas de texto ''
   if (localStorage.getItem("dark-mode") === "true") {
     document.body.classList.add("dark");
+    // SWITCH_PRESSED.classList.add('pressed')
   } else {
     document.body.classList.remove("dark");
+    // SWITCH_PRESSED.classList.remove('pressed')
   }
 
   return (

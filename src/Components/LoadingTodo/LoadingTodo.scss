@@ -1,9 +1,9 @@
 .TodoItem-loading {
   display: flex;
   padding-left: calc(50% - 45px);
-  background-color: white;
+  background-color: #EDEDED;
   color: #333;
-  min-height: 37px;
+  min-height: 40px;
 }
 
 .LoaderBalls {
@@ -40,4 +40,8 @@
   60% {
     opacity: 1;
   }
+}
+
+body.dark .TodoItem-loading {
+  background-color: #121212;
 }
