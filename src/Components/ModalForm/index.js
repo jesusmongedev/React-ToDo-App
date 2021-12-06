@@ -22,10 +22,21 @@ const ModalForm = () => {
     setOpenModal(false);
   };
 
+  const KeyHandleSubmit = (ev) => {
+    console.log(ev.key);
+    if (ev.key === "Enter") {
+      addTodo(newTodoValue);
+      setOpenModal(false);
+    }
+  };
+
   return (
     <>
-      <div className="overlay" onClick={onCancel}></div>
-      <form onSubmit={onSubmit} className="modalForm">
+      <div 
+        className="overlay" 
+        onClick={onCancel}  
+      > </div>
+      <form onSubmit={onSubmit} className="modalForm" >
         <label htmlFor="newTodo" className="modalForm__label">
           Add New To-do ...
         </label>
@@ -36,12 +47,14 @@ const ModalForm = () => {
             id="newTodo"
             placeholder="What needs to be done ... ?"
             className="modalForm__add-input"
+            onKeyDown={KeyHandleSubmit}
             autoFocus
           />
-          <button 
-            className="modal-button" type="submit" 
+          <button
+            className="modal-button"
+            type="submit"
             onClick={onSubmit}
-            disabled={newTodoValue? false : true}
+            disabled={newTodoValue ? false : true}
           >
             Add a Todo
           </button>

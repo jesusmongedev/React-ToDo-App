@@ -9,6 +9,7 @@ import { Modal } from "../../Modal";
 import { ModalForm } from "../ModalForm";
 import { LoadingTodo } from "../LoadingTodo";
 import { ClearTodos } from "../ClearTodos";
+import { Footer } from "../Footer";
 
 const AppUi = () => {
   // Manera mas optima de llamar mis estados del value creado en mi TodoContext
@@ -46,10 +47,10 @@ const AppUi = () => {
             onEdit={() => handleEdit(todo.text)}
           />
         ))}
-      <CreateButton setOpenModal={setOpenModal} />
+        <CreateButton setOpenModal={setOpenModal} />
+       {totalTodos? <ClearTodos/> : ""}
       </TodoForm>
       
-      {totalTodos? <ClearTodos/> : ""}
       
 
       {openModal && (
@@ -57,6 +58,8 @@ const AppUi = () => {
           <ModalForm />
         </Modal>
       )}
+
+      <Footer/>  
 
     </>
   );
