@@ -3,11 +3,24 @@ import { TodoContext } from "../TodoContext";
 import "./TodoCounter.scss";
 
 const TodoCounter = () => {
-  const { completedTodos, totalTodos, handleDarkMode } = React.useContext(TodoContext);
+  const { completedTodos, totalTodos, handleDarkMode } =
+    React.useContext(TodoContext);
 
+
+  // Obtenemos el modo actual por su clave y comprobamos su valor el cual debe ser con cadenas de texto ''
+  if (localStorage.getItem("dark-mode") === "true") {
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
+  
   return (
     <>
-      <buttton className="switch" id="switch" onClick={handleDarkMode}>
+      <buttton 
+        className={`switch ${localStorage.getItem("dark-mode")? "" : "pressed" }`}
+        id="switch" 
+        onClick={handleDarkMode}
+      >
         <span>
           <i className="bx bxs-sun"></i>
         </span>
