@@ -23,7 +23,6 @@ const ModalForm = () => {
   };
 
   const KeyHandleSubmit = (ev) => {
-    console.log(ev.key);
     if (ev.key === "Enter") {
       addTodo(newTodoValue);
       setOpenModal(false);

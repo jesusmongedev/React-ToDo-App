@@ -10,10 +10,12 @@ html {
 
 body {
   background-color: #EDEDED;
+  // background-color: white;
   font-family: 'Poppins', sans-serif;
   transition: .3s ease all; 
   &.dark {
-    background-color: #121212;
+    // background-color: #121212;
+    background-color: #0E2431;
     color: white;
   }
 }
