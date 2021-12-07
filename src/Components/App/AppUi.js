@@ -10,6 +10,8 @@ import { ModalForm } from "../ModalForm";
 import { LoadingTodo } from "../LoadingTodo";
 import { ClearTodos } from "../ClearTodos";
 import { Footer } from "../Footer";
+import { CreateTodo } from "../CreateTodo";
+import { ErrorLoadingTodos } from "../ErrorLoadingTodos";
 
 const AppUi = () => {
   // Manera mas optima de llamar mis estados del value creado en mi TodoContext
@@ -23,19 +25,21 @@ const AppUi = () => {
     setOpenModal,
     handleEdit,
     totalTodos,
+    todos,
     } = React.useContext(TodoContext);
 
   return (
     <>
       <TodoForm>
         <TodoCounter />
-        <TodoSearch />
+        {!!todos.length && <TodoSearch /> }
+
         {/* Agregar Estados: cargando, carga completa, error */}
-        {error && <p>Hubo un error, recarga la página</p>}
-        {loading && new Array(4).fill().map((item,index)=>(
+        {error && <ErrorLoadingTodos/>}
+        {loading && new Array(3).fill().map((item,index)=>(
           <LoadingTodo key={index} />
         ))}
-        {!loading && !searchedTodos.length && <p>Crea tu primer Todo</p>}
+        {!loading && !todos.length && <CreateTodo/> }
 
         {searchedTodos.map((todo) => (
           <TodoItem
@@ -47,7 +51,8 @@ const AppUi = () => {
             onEdit={() => handleEdit(todo.text)}
           />
         ))}
-        <CreateButton setOpenModal={setOpenModal} />
+        {!error? <CreateButton setOpenModal={setOpenModal} /> : ""  }
+        
        {totalTodos? <ClearTodos/> : ""}
       </TodoForm>
       

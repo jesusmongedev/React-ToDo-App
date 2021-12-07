@@ -35,7 +35,7 @@ const useLocalStorage = (itemName, initialValue) => {
             parsedItem = JSON.parse(localStorageItem);
           }
   
-          //Actualizamos nuestro item con la información en localStorage
+          // Actualizamos nuestro item con la información en localStorage
           setItem(parsedItem);
           // En este punto ya cargaron los datos por eso setLoading(false)
           setLoading(false);

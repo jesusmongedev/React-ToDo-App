@@ -1,0 +1,56 @@
+.error-container {
+    text-align: center;
+}
+
+.error-container__404 {
+    font-size: 8rem;
+}
+
+.error-container__subtitle {
+    font-size: 2rem;
+    color: #FF4500;
+    padding-bottom: 1rem;
+}
+
+.error-container__description {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+}
+
+/* Error Container button styles */
+.error-container__button {
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 0.3rem solid #FF4500;
+    color: #FF4500;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.error-container__button:hover {
+    transform: translateY(-3px);
+}
+
+.error-container__button:active {
+    transform: translateY(3px);
+}
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+  .pulse {
+    animation-name: pulse;
+    animation-duration: 1.5s;
+}
