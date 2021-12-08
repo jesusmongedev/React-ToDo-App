@@ -21,11 +21,11 @@ body {
 }
 
 #root {
-  height: 100vh;
+  min-block-size: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 /* ------------------ SWITCH ---------------- */

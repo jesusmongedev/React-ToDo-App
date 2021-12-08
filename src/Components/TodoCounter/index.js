@@ -28,13 +28,7 @@ const TodoCounter = () => {
         </span>
       </span>
       <h1 className="todo-counter">
-        {" "}
-        Haz completado{" "}
-        <p className="todo-counter-stats">
-          {" "}
-          <span className="completed">{completedTodos} </span> de{" "}
-          <span>{totalTodos} </span> Todos{" "}
-        </p>
+        <span className="completed">{completedTodos} </span> COMPLETED OF <span>{totalTodos} </span> 
       </h1>
     </>
   );
