@@ -10,16 +10,15 @@ body.active-modal {
     gap: 1.5rem;
     font-size: 1.8rem;
     background-color: rgba(32,35,41,.9);
+    border: 0.3rem solid #EDEDED;
     border-radius: 8px;
-    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.75);
     z-index: 2;
     .modalForm__add {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         .modalForm__add-input {
-            border: none;
-            box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.75);
+            border: 0.3rem solid #ededed73;
             padding: 1rem 1.5rem;
             border-radius: 8px;
             background: transparent;
@@ -28,21 +27,27 @@ body.active-modal {
             color: white;
             &:focus {
                 outline: none;
-                box-shadow: 0px 1px 4px 1px rgba(255, 255, 255, 0.75);
+                border: 0.3rem solid #EDEDED;
             }
         }
     }
     .modal-button {
-        border: 1px solid rgb(255, 255, 255);
+        border: 0.3rem solid #EDEDED;
         border-radius: 8px;
-        background: rgb(1, 135, 180);
+        background: orange;
+        color: white;
         padding: 1rem 1.5rem;
         font-size: 1.6rem;
         font-weight: bold;
         cursor: pointer;
+        opacity: 0.8;
+        transition: .3s all ease;
+        &:hover {
+            opacity: 1;
+        }
     }
     .modal-button--cancel {
-        background-color: rgb(253, 21, 21);
+        background-color: #fc352e;
     }
 }
 

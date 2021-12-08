@@ -37,7 +37,7 @@ const ModalForm = () => {
       > </div>
       <form onSubmit={onSubmit} className="modalForm" >
         <label htmlFor="newTodo" className="modalForm__label">
-          Add New To-do ...
+          New Todo:
         </label>
         <div className="modalForm__add">
           <textarea
@@ -55,14 +55,14 @@ const ModalForm = () => {
             onClick={onSubmit}
             disabled={newTodoValue ? false : true}
           >
-            Add a Todo
+            ADD
           </button>
           <button
             className="modal-button modal-button--cancel"
             type="button"
             onClick={onCancel}
           >
-            Cancel
+            CANCEL
           </button>
         </div>
       </form>
