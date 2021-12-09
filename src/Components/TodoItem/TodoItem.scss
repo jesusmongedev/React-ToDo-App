@@ -1,13 +1,10 @@
-.todo-form-item {
-  padding-bottom: 0.5rem;
   .list-content {
     display: flex;
-    // word-break: break-all;
-    max-width: 400px;
+    max-width: 280px;
     .checkbox {
       align-self: center;
       font-size: 2.25rem;
-      margin-right: 1.15rem;
+      margin-right: 0.8rem;
       transition: all ease 0.4s;
       &:hover {
         color: orange;
@@ -18,7 +15,8 @@
       color: orange;
     }
   }
-}
+  
+
 
 .list-content__completed {
   text-decoration: line-through;
@@ -55,21 +53,28 @@
   }
 }
 
+@media screen and (min-width: 420px) {
+  .list-content {
+    max-width: 380px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .list-content {
-    margin-right: 1rem;
+    max-width: 410px;
     .checkbox {
       margin-right: 1.3rem;
       transform: scale(1.2);
     }
   }
+}
   .form-actions {
     margin-left: 1.5rem;
     .form-actions-icon {
       margin: 0 0.2rem;
     }
   }
-}
+
 
 body.dark .form-actions-icon {
   color: #39ff14;
@@ -78,10 +83,11 @@ body.dark .form-actions-icon {
   }
   
 }
-body.dark .form-actions-delete {
+
+body.dark .form-actions-delete { 
   color: #f72119;
   &:hover {
     color: #fc352e;
   }
-  
 }
+  

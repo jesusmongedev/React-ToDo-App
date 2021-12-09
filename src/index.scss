@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 /* Initial Styles */
 * {
   margin: 0;
@@ -10,11 +12,9 @@ html {
 
 body {
   background-color: #EDEDED;
-  // background-color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   transition: .3s ease all; 
   &.dark {
-    // background-color: #121212;
     background-color: #0E2431;
     color: white;
   }
@@ -63,7 +63,7 @@ body {
     width: 30px;
     height: 30px;
     padding-left: 6px;
-    line-height: 30px;
+    line-height: 33px;
     display: block;
     background: none;
     color: #fff; }

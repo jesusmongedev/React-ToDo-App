@@ -1,6 +1,8 @@
 import React from "react";
 import { TodoContext } from "../TodoContext";
 import "./TodoCounter.scss";
+import { BsFillSunFill } from "react-icons/bs";
+import { BsMoonFill } from "react-icons/bs";
 
 const TodoCounter = () => {
   const { completedTodos, totalTodos, handleDarkMode } =
@@ -21,10 +23,10 @@ const TodoCounter = () => {
         onClick={handleDarkMode}
       >
         <span>
-          <i className="bx bxs-sun"></i>
+          <BsFillSunFill/>
         </span>
         <span>
-          <i className="bx bxs-moon"></i>
+          <BsMoonFill/>
         </span>
       </span>
       <h1 className="todo-counter">

@@ -2,7 +2,7 @@
     // Background transparent - blur background
     position: sticky;
     top: 0;
-    padding: 12px 24px;
+    padding: 8px 16px;
     border-radius: 8px;
     border: none;
     outline: 0.3rem solid black;
@@ -16,7 +16,6 @@
     &::placeholder {
       color: rgba(0, 0, 0, 0.4);
       font-weight: 500;
-      font-size: 1.8rem;
     }
   }
 
@@ -30,3 +29,9 @@
       color: rgba(255, 255, 255, 0.5);
     }
   } 
+
+  @media screen and(min-width: 768px) {
+    .todo-search{
+      padding: 10px 20px;
+    }
+  }

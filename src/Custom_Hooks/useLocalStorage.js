@@ -43,7 +43,7 @@ const useLocalStorage = (itemName, initialValue) => {
         } catch(error) {
           setError(error);
         }
-      }, 2000);
+      }, 1000);
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }),[]);
 
