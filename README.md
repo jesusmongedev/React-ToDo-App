@@ -4,8 +4,8 @@ This project was part of the Platzi Course [Intro to React](https://platzi.com/c
 
 ## ToDo App features
 
-The ToDo Machine App allows users to add, edit, delete, clear and search Todos. 
-Additionally mark tasks as complete, a button to switch between light and dark theme.
+The ToDo Machine App allows users to *add*, *edit*, *delete*, *clear* and *search Todos*.\
+Additionally *mark tasks as complete*, a button to *switch between light and dark theme*.
 
 ### `Let's talk`
 
